@@ -24,6 +24,7 @@ def controller(xtra):
     controller = SimpleNamespace()
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    options.headless = True
     controller.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
     controller.home_page = HomePage(controller.driver, xtra)
     controller.inventory_page = InventoryPage(controller.driver, xtra)
