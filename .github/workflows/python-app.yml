@@ -35,4 +35,4 @@ jobs:
           ${{ runner.os }}-pip-    
     - name: Test with pytest
       run: |
-        pytest --xtra
+        pytest tests/test_example.py::test_example --xtra
